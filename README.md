@@ -1,5 +1,6 @@
 # MCCrashTerminator
 iOS Crash Terminator 名字听起来比较中二~-~
+简书地址:http://www.jianshu.com/p/cb497e02a4c5
 
 ###先来看下网易提供给我们参考的部分
 >拦截调用就是，在找不到调用的方法程序崩溃之前，你有机会通过重写NSObject的四个方法来处理:

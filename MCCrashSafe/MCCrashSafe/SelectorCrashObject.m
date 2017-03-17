@@ -26,6 +26,9 @@
         return methodSignature;
     }
 }
+- (id)forwardingTargetForSelector:(SEL)aSelector {
+    return [super forwardingTargetForSelector:aSelector];
+}
 void empty(){
     NSLog(@"empty");
 }

@@ -14,6 +14,9 @@
 		4121147B1E7B7E9C0015FB2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412114791E7B7E9C0015FB2F /* LaunchScreen.storyboard */; };
 		412114851E7B80D10015FB2F /* SelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412114841E7B80D10015FB2F /* SelectorViewController.m */; };
 		412114881E7B80F30015FB2F /* SelectorCrashObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 412114871E7B80F30015FB2F /* SelectorCrashObject.m */; };
+		4126E2701E8364B400FC9B16 /* UINeedsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126E26F1E8364B400FC9B16 /* UINeedsViewController.m */; };
+		4126E2731E8364D100FC9B16 /* UICrashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126E2721E8364D100FC9B16 /* UICrashView.m */; };
+		4126E2761E83748600FC9B16 /* UIView+UICrashSafety.m in Sources */ = {isa = PBXBuildFile; fileRef = 4126E2751E83748600FC9B16 /* UIView+UICrashSafety.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,12 @@
 		412114841E7B80D10015FB2F /* SelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorViewController.m; sourceTree = "<group>"; };
 		412114861E7B80F30015FB2F /* SelectorCrashObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorCrashObject.h; sourceTree = "<group>"; };
 		412114871E7B80F30015FB2F /* SelectorCrashObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorCrashObject.m; sourceTree = "<group>"; };
+		4126E26E1E8364B400FC9B16 /* UINeedsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINeedsViewController.h; sourceTree = "<group>"; };
+		4126E26F1E8364B400FC9B16 /* UINeedsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINeedsViewController.m; sourceTree = "<group>"; };
+		4126E2711E8364D100FC9B16 /* UICrashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICrashView.h; sourceTree = "<group>"; };
+		4126E2721E8364D100FC9B16 /* UICrashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICrashView.m; sourceTree = "<group>"; };
+		4126E2741E83748600FC9B16 /* UIView+UICrashSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UICrashSafety.h"; sourceTree = "<group>"; };
+		4126E2751E83748600FC9B16 /* UIView+UICrashSafety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UICrashSafety.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,7 @@
 		4121146A1E7B7E9C0015FB2F /* MCCrashSafe */ = {
 			isa = PBXGroup;
 			children = (
+				4126E26D1E83644B00FC9B16 /* UI */,
 				412114821E7B7FF80015FB2F /* Selector */,
 				4121146E1E7B7E9C0015FB2F /* AppDelegate.h */,
 				4121146F1E7B7E9C0015FB2F /* AppDelegate.m */,
@@ -92,6 +102,19 @@
 				412114871E7B80F30015FB2F /* SelectorCrashObject.m */,
 			);
 			name = Selector;
+			sourceTree = "<group>";
+		};
+		4126E26D1E83644B00FC9B16 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4126E26E1E8364B400FC9B16 /* UINeedsViewController.h */,
+				4126E26F1E8364B400FC9B16 /* UINeedsViewController.m */,
+				4126E2711E8364D100FC9B16 /* UICrashView.h */,
+				4126E2721E8364D100FC9B16 /* UICrashView.m */,
+				4126E2741E83748600FC9B16 /* UIView+UICrashSafety.h */,
+				4126E2751E83748600FC9B16 /* UIView+UICrashSafety.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4126E2761E83748600FC9B16 /* UIView+UICrashSafety.m in Sources */,
 				412114731E7B7E9C0015FB2F /* ViewController.m in Sources */,
 				412114701E7B7E9C0015FB2F /* AppDelegate.m in Sources */,
+				4126E2701E8364B400FC9B16 /* UINeedsViewController.m in Sources */,
 				412114881E7B80F30015FB2F /* SelectorCrashObject.m in Sources */,
 				4121146D1E7B7E9C0015FB2F /* main.m in Sources */,
+				4126E2731E8364D100FC9B16 /* UICrashView.m in Sources */,
 				412114851E7B80D10015FB2F /* SelectorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +346,7 @@
 				412114811E7B7E9C0015FB2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

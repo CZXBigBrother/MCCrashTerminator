@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SelectorViewController.h"
+#import "UINeedsViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) NSArray *myArr;
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.myArr = @[@"unrecognized selector"];
+    self.myArr = @[@"unrecognized selector",@"UI not on Main Thread"];
     UITableView * tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -27,10 +28,10 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.myArr.count;
+    return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.myArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -46,6 +47,9 @@
     if (indexPath.row == 0) {
         SelectorViewController * select = [[SelectorViewController alloc]init];
         [self.navigationController pushViewController:select animated:YES];
+    }else if(indexPath.row == 1) {
+        UINeedsViewController * ui = [[UINeedsViewController alloc]init];
+        [self.navigationController pushViewController:ui animated:YES];
     }
 }
 

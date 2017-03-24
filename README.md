@@ -61,9 +61,9 @@ NSLog(@"empty");
 > 3.8 非主线程刷UI类型crash防护（UI not on Main Thread）
 在非主线程刷UI将会导致app运行crash，有必要对其进行处理。
 目前初步的处理方案是swizzle UIView类的以下三个方法：
-- (void)setNeedsLayout;
-- (void)setNeedsDisplay;
-- (void)setNeedsDisplayInRect:(CGRect)rect;
+>- (void)setNeedsLayout;
+>- (void)setNeedsDisplay;
+>- (void)setNeedsDisplayInRect:(CGRect)rect;
 在这三个方法调用的时候判断一下当前的线程，如果不是主线程的话，直接利用 dispatch_async(dispatch_get_main_queue(), ^{ //调用原本方法 });
 来将对应的刷UI的操作转移到主线程上，同时统计错误信息。
 但是真正实施了之后，发现这三个方法并不能完全覆盖UIView相关的所有刷UI到操作，但是如果要将全部到UIView的刷UI的方法统计起来并且swizzle，感觉略笨拙而且不高效。
